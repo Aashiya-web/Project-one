@@ -10,9 +10,10 @@ This project automates the process of extracting bus route data from the RedBus 
 - [Technologies Used](#technologies-used)
 - [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
-- [Project Structure](#project-structure)
 - [Database Schema](#database-schema)
-
+- [Project Explanation](#project-explanation)
+- [License](#license)
+- [Contact Information](#contact-information)
 
 ---
 
@@ -72,15 +73,6 @@ streamlit run app.py
 ```
 - Opens a dashboard to visualize and filter bus route data.
 
----
-
-## Project Structure
-```
-|-- scraper.py               # Web scraping and database insertion
-|-- app.py                   # Streamlit dashboard
-|-- requirements.txt         # Required dependencies
-|-- readme.md                # Project documentation
-```
 
 ---
 
@@ -102,4 +94,31 @@ streamlit run app.py
 
 ---
 
+## Project Explanation
+### 1. Web Scraping with Selenium
+The scraper navigates the RedBus website to extract bus route data. Selenium automates the browser to interact with web elements, extract information, and store it in structured Python dictionaries. The scraper collects details like bus names, types, schedules, prices, and seat availability.
+
+### 2. Data Storage in MySQL
+The extracted data is inserted into the `bus_routes` table of a MySQL database. This ensures data persistence and enables complex querying and filtering.
+
+### 3. Streamlit Dashboard
+A Streamlit app visualizes the collected data. The dashboard offers interactive filters to narrow down buses by type, route, price, and rating. The app uses Pandas to manipulate data and Streamlit's UI components for user-friendly interaction.
+
+### 4. User Interaction and Filtering
+The dashboard allows users to:
+- Filter by bus type and route
+- Set price and rating ranges
+- View detailed route information in real-time
+
+---
+
+## License
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
+
+## Contact Information
+For questions, feedback, or collaborations, feel free to reach out:
+- **Name**: Aashiya. Z
+- **Email**: aashiyakhan1926@gmail.com
 
